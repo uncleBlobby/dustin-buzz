@@ -4,6 +4,8 @@
     margin: 1rem auto 6rem;
     background-color: #191919;
     border: 1px solid #191919;
+    border-radius: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 .header {

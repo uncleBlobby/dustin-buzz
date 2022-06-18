@@ -1,11 +1,22 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../Components/layout';
 import News from '../Components/news';
+import { getSortedPostsData } from '../lib/posts';
 import utilStyles from '../styles/utils.module.css';
 
 import Link from 'next/link'
+import Date from '../Components/date';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData
+    },
+  };
+}
+
+export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
@@ -13,7 +24,7 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMD}>
       <div className={utilStyles.navList}>
-      <Link href="/pages/blog"><a>Blog</a></Link>
+      <Link href="/blogs"><a>Blog</a></Link>
       <Link href="/pages/projects"><a>Projects</a></Link>
       <Link href="/pages/about"><a>About</a></Link>
       </div>       
@@ -29,12 +40,23 @@ export default function Home() {
           This is a simple website I use to catalogue my work and to share my thoughts.  Thanks for stopping by, I really hope you enjoy your stay.
         </p>
       </section>
-      <News>
-        <section className={utilStyles.headingMD}>
-        <p><Link href="blog/2022-06-18"><a>2022-18-06: dustin.buzz.deploy()</a></Link></p>
-        </section>
-        <p className={utilStyles.subText}>Left foot, right foot, one breath at a time.</p>
-      </News>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Blog Posts</h2>
+        <ul className={utilStyles.list}>
+          {allPostsData.map(({ id, date, title }) => (
+            <li className={utilStyles.listItem} key={id}>
+              <Link href={`/blogs/${id}`}>
+                <a>{title}</a>
+              </Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
+          ))}
+        </ul>
+      </section>
+      
     </Layout>
   );
 }

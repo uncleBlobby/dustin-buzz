@@ -44,13 +44,13 @@ const Layout = ({ children, home }) => {
                             priority
                             src="/images/dustin-buzz.svg"
                             className={utilStyles.borderCircle}
-                            height={108}
-                            width={108}
+                            height={144}
+                            width={144}
                             alt={name}
                         />
                         </a>
                         </Link>
-                        <h2 className={utilStyles.headingLG}>
+                        <h2 className={utilStyles.heading2XL}>
                             <Link href="/">
                                 <a className={utilStyles.colorInherit}>{name}</a>
                             </Link>

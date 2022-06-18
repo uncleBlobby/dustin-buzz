@@ -48,7 +48,9 @@
 }
 
 .darkText {
-    color: #494949
+    margin-top: -1.5rem;
+    color: #696969;
+    margin-bottom: -1.5rem;
 }
 
 .navList {
