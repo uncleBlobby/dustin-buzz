@@ -47,8 +47,9 @@ export default function Home({ allPostsData }) {
         <p>In my free time, I like to play video games--and I would really like to eventually create one of my own.  I have had a few false starts in that regard, but 
         learning to work with video game engines (<a href="https://godotengine.org/">Godot</a>, in particular) has been a fun experience, and helpful in terms of applying some of the things I've been learning about programming.</p>
         <p>I've spent almost 20 years learning to play guitar, and more recently took it on myself to start trying to sing as well.  Also more recently, I've inherited
-        my grandfather's old accordion--but I've still got a long way to go before I can play it with any sort of confidence.  <p>Apologies to my neighbours.</p>  I have released a few electronic
-        music EP's, started a rap album I have yet to finish, worked on post-production audio for several short films, and recorded almost 50 podcast episodes with some of my good pals.</p>
+        my grandfather's old accordion--but I've still got a long way to go before I can play it with any sort of confidence.  <p>Apologies to my neighbours.</p>  I have released a 
+        few <a href="https://soundcloud.com/jonny-strangelove">electronic music EP</a>'s, started a <a href="https://soundcloud.com/uncleblobby">rap album</a> I have yet to finish, 
+        worked on audio for several <a href="https://youtu.be/4rYnJ9R9-6c">independent short films</a>, and recorded almost 50 <a href="https://open.spotify.com/show/5zxwf7aKetUdWIbpk7O0vI?si=a583dcec09d64f11">podcast episodes</a> with some of my good pals.</p>
         <p>&#128075; Bye for now! &#128075;</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
