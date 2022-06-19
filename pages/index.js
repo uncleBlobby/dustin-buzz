@@ -39,7 +39,7 @@ export default function Home({ allPostsData, allProjectsData }) {
           <li>React Frontend (ViteJS, NextJS in particular)</li>
           <li>ExpressJS Backend</li>
           <li>Sqlite3 RDMS, SQL</li>
-          <li>Python, Go, and C</li>
+          <li>Javascript (ES6), Python3, Go, and C</li>
           <li>Linux, FOSS</li>
         </ul>
         <p>Outside of software development, I have a variety of other interests.  I hold a B.A. in Philosophy from the University of Regina, and I 
