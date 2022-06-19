@@ -6,17 +6,20 @@ import utilStyles from '../styles/utils.module.css';
 
 import Link from 'next/link'
 import Date from '../Components/date';
+import { getSortedProjectData } from '../lib/projects';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  const allProjectsData = getSortedProjectData();
   return {
     props: {
-      allPostsData
+      allPostsData,
+      allProjectsData
     },
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, allProjectsData }) {
   return (
     <Layout home>
       <Head>
@@ -25,7 +28,7 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMD}>
       <div className={utilStyles.navList}>
       <Link href="/blogs"><a>Blog</a></Link>
-      <Link href="/pages/projects"><a>Projects</a></Link>
+      <Link href="/projects"><a>Projects</a></Link>
       <a href="https://github.com/uncleBlobby">Github</a>
       </div>       
       </section>
@@ -53,6 +56,22 @@ export default function Home({ allPostsData }) {
         <p>&#128075; Bye for now! &#128075;</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Projects</h2>
+        <ul className={utilStyles.list}>
+          {allProjectsData.map(({ id, date, title }) => (
+            <li className={utilStyles.listItem} key={id}>
+              <Link href={`/projects/${id}`}>
+                <a>{title}</a>
+              </Link>
+              <br />
+              <small className={utilStyles.darkText}>
+                <Date dateString={date} />
+              </small>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog Posts</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -68,6 +87,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+
       
     </Layout>
   );

@@ -13,8 +13,8 @@ export default function Custom404() {
         <section className={utilStyles.headingMD}>
             <div className={utilStyles.navList}>
             <Link href="/blogs"><a>Blog</a></Link>
-            <Link href="/pages/projects"><a>Projects</a></Link>
-            <Link href="/pages/about"><a>About</a></Link>
+            <Link href="/projects"><a>Projects</a></Link>
+            <a href="https://github.com/uncleBlobby">Github</a>
             </div>
         </section>
         <p>This page is still under construction.</p>

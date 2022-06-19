@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import utilStyles from '../styles/utils.module.css';
 
-export default function BlogsHome(){
+export default function ProjectsHome(){
     return (
         <Layout>
             <Head>
@@ -16,11 +16,10 @@ export default function BlogsHome(){
             <a href="https://github.com/uncleBlobby">Github</a>
             </div>
             </section>
-            <h1>Blog</h1>
-            <Link href="/blogs/smokers-first-jog"><a>2022-06-18 : smoker's first jog</a></Link>
-            <p className={utilStyles.subText}>Left foot, right foot, one breath at a time.  Wheeze.</p>
-            <Link href="/blogs/220618"><a>2022-06-18 : dustin.buzz.deploy()</a></Link>
-            <p className={utilStyles.subText}>The time has come to begin again.</p>
+            <h1>Projects</h1>
+            <Link href="/projects/jester-js"><a>2022-06-19 : jesterJS</a></Link>
+            <p className={utilStyles.subText}>Automatic joke collecting bot using python3, sqlite3, express, and react.</p>
+            <p className={utilStyles.subText}><a href="https://github.com/uncleBlobby/jesterJS/">Github Repo</a></p>
         </Layout>
     );
 }
