@@ -6,6 +6,7 @@ const Blog = () => {
     return (
         <Layout home>
             <h1>Blog</h1>
+            <Link href="blog/smokers-first-jog"><a>Smoker's First Jog</a></Link>
             <Link href="blog/2022-06-18"><a>2022-06-18</a></Link>
         </Layout>
     );

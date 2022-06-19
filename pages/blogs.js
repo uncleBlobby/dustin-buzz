@@ -17,8 +17,10 @@ export default function BlogsHome(){
             </div>
             </section>
             <h1>Blog</h1>
+            <Link href="/blogs/smokers-first-jog"><a>2022-06-18 : smoker's first jog</a></Link>
+            <p className={utilStyles.subText}>Left foot, right foot, one breath at a time.  Wheeze.</p>
             <Link href="/blogs/220618"><a>2022-06-18 : dustin.buzz.deploy()</a></Link>
-            <p className={utilStyles.subText}>Left foot, right foot, one breath at a time.  The time has come to begin again.</p>
+            <p className={utilStyles.subText}>The time has come to begin again.</p>
         </Layout>
     );
 }
